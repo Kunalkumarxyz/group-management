@@ -69,7 +69,3 @@ app.get("/api/groups/search/:name", (req, res) => {
     });
 });
 
-
-app.get("/", (req, res) => {
-    res.send("🚀 Group Management API is Live!");
-});
