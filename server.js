@@ -68,3 +68,8 @@ app.get("/api/groups/search/:name", (req, res) => {
         res.json(rows);
     });
 });
+
+
+app.get("/", (req, res) => {
+    res.send("🚀 Group Management API is Live!");
+});
