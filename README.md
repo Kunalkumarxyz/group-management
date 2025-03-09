@@ -18,6 +18,44 @@ cd group-management
 3️⃣ Start the server:
     node server.js
 
+📡 API Endpoints
+
+1️⃣ Create a Group
+    POST /api/groups
+
+Request Body:
+
+{
+  "name": "Web Developers"
+}
+
+2️⃣ Get All Groups
+    GET /api/groups
+
+3️⃣ Search Groups by Name
+    GET /api/groups/search?name=Web
+
+4️⃣ Add Member to Group
+    POST /api/groups/:groupId/members
+
+Request Body:
+
+{
+  "name": "Kunal Kumar"
+}
+
+
+📡 Deployment
+
+Live API Link: https://group-management.onrender.com
+Maintained by: Kunal Kumar
+GitHub: https://github.com/Kunalkumarxyz
+
+
+
+
+
+
 
 
 
