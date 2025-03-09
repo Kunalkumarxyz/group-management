@@ -18,7 +18,7 @@ app.post("/api/groups", (req, res) => {
     });
 });
 
-// ✅ API: See All Group
+// ✅ API: See All Groups
 app.get("/api/groups", (req, res) => {
     db.all("SELECT * FROM groups", [], (err, rows) => {
         if (err) {
@@ -28,7 +28,7 @@ app.get("/api/groups", (req, res) => {
     });
 });
 
-// ✅ API: Add Member In Group
+// ✅ API: Add Member in Group
 app.post("/api/groups/:groupId/members", (req, res) => {
     const { groupId } = req.params;
     const { name } = req.body;
@@ -41,7 +41,7 @@ app.post("/api/groups/:groupId/members", (req, res) => {
     });
 });
 
-// ✅ API: See Specific Group for Member
+// ✅ API: See Specific Group Members
 app.get("/api/groups/:groupId/members", (req, res) => {
     const { groupId } = req.params;
 
@@ -51,11 +51,6 @@ app.get("/api/groups/:groupId/members", (req, res) => {
         }
         res.json(rows);
     });
-});
-
-// ✅ Start The Server
-app.listen(5000, () => {
-    console.log("✅ Server running on port 5000");
 });
 
 // ✅ API: Search Groups by Name
@@ -69,8 +64,13 @@ app.get("/api/groups/search/:name", (req, res) => {
     });
 });
 
-
-
+// ✅ Default Route
 app.get("/", (req, res) => {
     res.send("🚀 Group Management API is Live!");
+});
+
+// ✅ Start The Server (Use process.env.PORT for Render)
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+    console.log(`✅ Server running on port ${PORT}`);
 });
