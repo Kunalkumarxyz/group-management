@@ -47,7 +47,7 @@ Request Body:
 
 📡 Deployment
 
-Live API Link: https://group-management.onrender.com
+Live API Link: https://group-management-xec8.onrender.com
 Maintained by: Kunal Kumar
 GitHub: https://github.com/Kunalkumarxyz
 
